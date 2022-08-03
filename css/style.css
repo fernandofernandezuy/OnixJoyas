@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Montserrat&family=PT+Serif&family=Poppins:wght@200;400&display=swap');
+
+html {
+	font-family: 'Montserrat';;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+	box-sizing: border-box;
+}
+
+/*Header*/
+
+#top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2rem;
+	padding-left: 4%;
+	background-color: #efefef;
+}
+
+#top p {
+	margin-left: 10rem;
+	margin-right: 10rem;
+	margin: 0;
+	font-size: 1.14em;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	height: 8rem;
+}	
+	
+#logo {
+	
+	padding-top: 20px;
+	text-decoration: none;
+	font-family: 'Alice';
+}
+
+#logo:hover {
+	transform: scale(1.02);
+}
+		
+#logo .name {
+	color: rgb(56, 55, 55);
+	padding-left: 25px;
+    display: block;
+    font-weight: 600;
+	font-size: 3em;
+}
+	
+#logo .desc {
+	color: rgb(53, 53, 53);
+    display: block;
+    padding-top: 0.5px;
+    padding-left: 22px;
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.list {
+	margin: 0;
+	display: block;
+	justify-content: center;
+	font-size: 1.2em;
+	font-family: 'Alice';
+}
+
+header ul {
+	margin: 0;
+	padding: 0p;
+}
+        
+header ul li {
+	display: inline-block;
+	line-height: 80px;
+}
+                
+header ul li a {
+	display: flex;
+	color: rgb(53, 53, 53);
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+header ul li a:hover {
+	font-weight: bolder;
+}
+
+
+#navbar a {
+	padding: 8px;
+	opacity: 0.9;
+	text-decoration: none;
+	color: black;
+	font-size: 1.3rem;
+}
+
+
+
+/*Welcome-Article*/
+
+#welcome-item {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 15%;
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#welcome-item a {
+	font-size: 1.5rem;
+	padding: 20px 30px;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	background-color: transparent;
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgb(255, 255, 255);
+}
+
+#welcome-item a:hover {
+	font-weight: bolder;
+	border-width: 3px;
+}  
+  
+#welcome {
+	color: black;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 27rem;
+
+}
+
+/*Container*/
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "novedades      novedades  novedades" 					 
+						 "seiko seiko seiko"
+						 "main main  reparaciones";
+	margin-left: 10rem;
+	margin-right: 10rem;
+	grid-gap: 20px 5px;
+	padding: 20px;
+}
+
+
+/*GridArea:Main*/
+
+.container .main {
+	grid-area: main;
+	padding: 0 20px 20px 20px;
+}
+
+.main h1 {
+	font-weight: lighter;
+}
+
+/*GridArea:Reparaciones*/
+
+.reparaciones h1 {
+	padding: 0;
+	font-size: 2rem;
+	font-weight: lighter;
+}
+
+.container .reparaciones {
+	padding: 0 20px 20px 20px;
+	grid-area: reparaciones;
+}
+
+.reparaciones .text {
+	display: block;
+	border: 5px;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+	width: 100%;
+	background-color: #efefef;
+
+
+}
+
+.submit {
+	width: 100%;
+	padding: 10px;
+	background-color: black;
+	border-radius: 5px;
+    border: 2px;
+    color: white;
+    opacity: 0.6;
+    transition: 0.3s;
+	position: relative;
+    cursor: pointer;
+}
+
+.submit:hover {
+	position: relative;
+	opacity: 1;
+}
+
+.watches {
+grid-area: seiko;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto 20rem;
+grid-gap: 5px;
+grid-template-areas: "title title title"
+					 "casio seik orient";
+}
+
+.watches h1 {
+	grid-area: title;
+	font-weight: lighter;
+	font-size: 2rem;
+}
+
+.watches div {
+	display: flex;
+	justify-content: right;
+	align-items: flex-end;
+	
+}
+
+.watches div a {
+ width: 100%;
+ height: 100%;
+
+
+}
+
+.watches a:hover {
+	transform: scale(1.02);
+}
+
+.watches #casio {
+	grid-area: casio;
+	background-image: url(../img/casio.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.watches #casio:hover {
+	background-image: url(../img/watchcasio.JPG);
+	background-size: contain;
+}
+
+.watches #seiko {
+	grid-area: seik;
+	background-image: url(../img/seiko.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
+.watches #seiko:hover {
+	background-image: url(../img/watchseiko.JPG);
+	background-size: contain;
+}
+
+.watches #orient {
+	grid-area: orient;
+	background-image: url(../img/orient.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.watches #orient:hover {
+	background-image: url(../img/watchorient.JPG);
+	background-size: contain;
+}
+
+/*GridArea:Novedades*/
+
+.container .slider {
+	grid-area: novedades;
+	background-color: white;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.slider h1 {
+	padding: 0px;
+	font-weight: lighter;
+	font-size: 2rem;
+	text-align: left;
+}
+
+.slider:hover {
+	opacity: 0.9;
+}
+
+.ulimg {
+	display: flex;
+	padding: 0;
+	width: 600%;
+	animation: slide 13s infinite alternate-reverse ease;
+}
+
+.newimg {
+	width: 100%;
+}
+
+.ulimg li {
+list-style: none;
+
+}
+
+@keyframes slide {
+	0% {margin-left: 0%;}
+	30% {margin-left: 0%;}
+
+	35% {margin-left: -60%;}
+	60% {margin-left: -90%;}
+
+	65% {margin-left: -90%;}
+	95% {margin-left: -120%;}
+
+}
+
+/*Footer*/
+
+footer {
+	font-family: 'Montserrat';
+	background-color: rgb(36, 34, 34);
+}
+
+footer .sitios {
+	padding: 20px;
+}
+
+.sitios p {
+	display: flex;
+	justify-content: center;
+	align-items: wrap;
+	font-size: 1.15rem;
+	text-align: center;
+	color: #a8a7a7;
+}
+
+.sitios p a {
+	font-size: 1.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	color: white;
+	text-decoration: none;
+}
+
+.sitios p a:hover {
+	color: rgb(109, 160, 228);
+}
+
+
+.bottom {
+	font-family: 'Montserrat';
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin: 0;
+	background-color: rgb(19, 18, 18);
+}
+
+.bottom p {
+	text-align: center;
+	color: white;
+}
+
+.bottom p a {
+	color: #424141;
+	text-decoration: none;
+}
+
+/*mates.html*/
+
+#cards {
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+}
+
+#cards {
+	color: #3d3c3c;
+    white-space: wrap;
+}
+
+.cardimg {
+	padding-top: 20rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.cardimg:hover {
+	opacity: 0.9;
+}
+
+#cards h2, h3 {
+	margin-left: 1rem;
+    text-align: left;
+}
+
+#cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+    gap: 20px;
+	grid-template-areas: "card card card card";
+	margin-left: 10rem;
+	margin-right: 10rem;
+	padding: 20px;
+}
+
+#cards h2 a {
+	font-size: 1.5rem;
+	color: #000000;
+	border-radius: 10px;
+	margin-right: 1rem;
+	text-decoration: none;
+	float: right;
+}
+
+.card {
+    border-radius: 5px;
+    text-align: center;
+	box-shadow: 5px 5px 5px 5px #efefef;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 1200px) {
+
+.container, #logo, .list {
+	margin-left: 0;
+	margin-right: 0;
+}
+	
+.seiko h1, .reparaciones h1, .main h1, .slider h1 {
+	font-size: 1.2rem;	
+}
+			
+.main p, .reparaciones p {
+	font-size: 1rem;
+}
+			
+.sitios p, .bottom p {
+		font-size: 0.9rem;
+	}
+			
+.sitios p a {
+		font-size: 1.2rem;
+
+}
+
+#cards {
+        margin: 20px;
+    }  		
+}
+
+@media only screen and (max-width: 768px) {
+
+
+.seiko h1, .reparaciones h1, .main h1, .slider h1 {
+	font-size: 1.2rem;	
+}
+
+.main p, .reparaciones p {
+	font-size: 1rem;
+}
+
+.sitios p, .bottom p {
+	font-size: 0.9rem;
+}
+
+.sitios p a {
+	font-size: 1.2rem;
+}
+
+.container {
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: "novedades     novedades    	novedades novedades"
+	                 "seiko     seiko     seiko seiko" 
+					 "main	main  reparaciones reparaciones	"
+}
+
+/*Mates*/
+
+.matimg, .bomimg, .bomimg2, .bomimg3 {
+	padding-top: 15rem;
+}
+
+#cards {
+	margin: 0;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "card card"
+						"card card";
+}
+
+}
+
+@media only screen and (max-width: 576px) {
+
+#welcome {
+	grid-template-rows: 10rem;
+}
+
+
+.novedades, .watches h1, .reparaciones h1, .main h1, .slider h1 {
+	font-size: 1rem;	
+}
+
+.slider {
+	height: 25rem;
+}
+
+.watches a {
+	width: 4.8em;
+	font-size: 0.7em;
+	border-width: 2.5px;
+}
+
+.watches {
+	grid-template-rows: auto 10rem auto;
+}
+
+	
+.main p, .reparaciones p {
+	font-size: 0.8rem;
+}
+	
+.sitios p, .bottom p {
+	font-size: 0.7rem;
+}
+	
+.sitios p a {
+	font-size: 1rem;
+}
+
+.sitios p {
+	display: flex;
+	columns: wrap;
+	text-align: center;
+	color: #a8a7a7;
+}
+	
+.container {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:"novedades     novedades      novedades" 
+						"seiko          seiko    	      seiko"
+						"main         main          main"  
+						"reparaciones  reparaciones   reparaciones"
+}
+
+	/*Mates*/
+#cards {
+   margin: 0 90px 0 90px;
+}
+
+.matimg, .bomimg, .bomimg2, .bomimg3 {
+    padding-top: 10rem;
+}
+
+#cards {
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto;
+    grid-template-areas:"card"
+                        "card"
+                        "card"
+                        "card";
+    }
+	}
+
+	
+
+
